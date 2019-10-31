@@ -1,0 +1,18 @@
+batch:
+#  cron: 0 * * * * *
+  cron: 0 0/5 * * * *
+feed:
+  url: http://feeds.nos.nl/nosjournaal?format=xml
+spring: 
+  datasource:
+    url: jdbc:h2:mem:news_feed_db
+    driverClassName: org.h2.Driver
+    username: newsfeed
+    password: newsfeed
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      
